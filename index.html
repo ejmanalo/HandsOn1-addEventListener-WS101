@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM AddEventListener</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Concert One|Voltaire">
+
+    <style>
+
+        @keyframes slide {
+            0%{left: 30px;}
+            100%{left:0px;}
+        }
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            
+           background: linear-gradient(90deg, rgba(133,154,115,1) 14%, rgba(157,188,152,1) 60%, rgba(99,136,137,1) 100%);
+            text-align: center;
+        }
+
+        body h1{
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 30px;
+            font-family: "Concert One";
+            font-weight: lighter;
+            position: relative;
+            animation: slide 2s;
+            text-shadow: 3px 3px 3px #ababab;
+            color: rgb(178, 115, 91);
+            transition: 3s;
+
+            
+            
+        }
+
+        .container {
+            width: 600px;
+            height: 400px;
+            margin: 150px auto 20px;
+            background: linear-gradient(90deg, rgba(140,187,165,1) 0%, rgba(187,224,232,1) 64%);
+            font-size: larger;
+            box-shadow: 0 4px 8px 0 rgba(1, 0, 0, 1), 0 6px 20px 0 rgba(1, 0, 0, 0.1);
+        }
+
+        .btn-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 40px auto;
+            width: 400px;
+            height: 200px;
+            border: solid white 2px;
+            border-radius: 10px;
+            box-shadow: 0 5px 7px 0 rgb(119, 109, 106), 0 6px 20px 0 rgba(1, 0, 0, 0.1);
+            
+            
+        }
+
+        button{
+            margin: 10px;
+            padding: 5px 50px;
+            font-family: "Voltaire";
+            font-size: larger;
+            border: none;
+            background-color: #FFC3A1 ;
+            transition: 1s ease;
+            border-radius: 5px;
+            cursor:pointer;
+            box-shadow: 5px 5px #D3756B;
+            color: whitesmoke;
+            font-weight: bold;
+            color: rgb(178, 115, 91);
+            text-shadow: 0 1px 0 #ababab;
+            
+        }
+
+        button:hover{
+            background-color:#F0997D;
+            transform: scale(1.2);
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="container">
+        <!--TITLE-->
+        <h1>JavaScript addEventListener()Hands-On</h1>
+
+        
+        <div class="btn-container">
+        <!--BUTTONS-->   
+            <button id="Btn1">Button 1</button>
+            <button id="Btn2">Button 2</button>
+            <button id="Btn3">Button 3</button>
+        </div>
+        
+    </div>
+
+    <script>
+
+        //USING ADDVENTLISTENER TO CONNECT THE BUTTONS TO ITS FUNCTION
+        document.getElementById("Btn1").addEventListener("click", Button1);
+        document.getElementById("Btn2").addEventListener("click", Button2);
+        document.getElementById("Btn3").addEventListener("click", Button3);
+
+        //FUNCTIONS OF THE BUTTONS
+        function Button1() {
+            alert("Button 1 was clicked");
+        }
+        
+        function Button2() {
+            alert("Button 2 was clicked");
+        }
+
+        function Button3() {
+            alert("Button 3 was clicked");
+        }
+
+    </script>
+  
+</body>
+</html>
